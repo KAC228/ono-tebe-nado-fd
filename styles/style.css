@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
     align-items: center;
-    padding: 92px 50px 96px 50px;
+    padding: 95px 50px 103px;
     color: #000;
     font-weight: normal;
     font-size: 18px;
@@ -14,6 +14,8 @@
     flex-direction: row;
     gap: 32px;
     list-style: none;
+    padding-bottom: 2px;
+    padding-left: 2px;
 }
 
 .link-active {
@@ -22,37 +24,37 @@
 
 .header-nav-circle {
     list-style: circle;
-    padding-left: 5px;
+    padding-left: 1px;
 }
 
 .header-logo {
-    /* Лого не вставало так как в макете, как бы я не пробовал, поэтому только через явное задание размеров.
-    display: block;*/
+    display: block;
+    justify-content: center;
     height: 105px;
-    width: 148px;
+    width: 135px;
 }
 
 .header-address {
     display: flex;
     flex-direction: column;
-    max-width: calc(240px + 184px);
-    padding-left: 185px;
     align-items: flex-start;
-    justify-items: end;
+    justify-content: flex-start;
+    max-width: calc(240px + 184px);
+    padding-left: 193px;
     font-style: normal;
+    line-height: 24.3px;
 }
 
 .cover {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: auto min-content;
     background-image: url(../images/cover.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 757px;
-    padding: 165px 50px 50px 50px;
+    padding: 165px 20px 50px 50px;
     font-family: Raleway, sans-serif;
     text-transform: uppercase;
     color: #fff;
@@ -72,6 +74,9 @@
 }
 
 .ono-tebe-nado {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     position: relative;
     font-weight: bold;
     font-size: 100px;
@@ -82,17 +87,17 @@
 
 .ono {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .tebe {
-    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .nado {
-    align-items: flex-end;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .description {
@@ -107,7 +112,7 @@
 }
 
 .cover-content {
-    word-spacing: 13px;
+    word-spacing: 19px;
     line-height: 28px;
 }
 
@@ -117,20 +122,19 @@
     border-color: #fff;
     color:#fff;
     padding: 12px 32px 11px 31px;
+    margin-right: 29px;
     text-transform: uppercase;
 }
 
 .lots {
-    padding-top: 180px;
+    padding: 180px 24px 0;
 }
 
 .lots-title {
     padding: 0 0 27px 40px;
     font-weight: bold;
     font-size: 40px;
-    line-height: 100%;
     text-transform: uppercase;
-
 }
 
 .lots-section {
@@ -140,7 +144,6 @@
     padding-bottom: 30px;
     list-style: none;
     color: #fff;
-    
 }
 
 .lots-section-items-link {
@@ -161,7 +164,7 @@
     font-weight: normal;
     font-size: 20px;
     line-height: 120%;
-    padding-top: 30px;
+
     z-index: 2;
 }
 
@@ -170,6 +173,7 @@
     display: grid;
     grid-template-rows: 158px auto;
     min-height: 596px;
+    max-height: 596px;
     background-image: url(../images/card-lot-01.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -182,10 +186,12 @@
     display: grid;
     grid-template-rows: 158px auto;
     min-height: 596px;
+    max-height: 596px;
     background-image: url(../images/card-lot-02.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    
     padding: 48px 40px;
 
 }
@@ -195,6 +201,7 @@
     display: grid;
     grid-template-rows: 158px auto;
     min-height: 596px;
+    max-height: 596px;
     background-image: url(../images/card-lot-03.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -210,29 +217,34 @@
 }
 
 .about {
-    padding: 100px 24px 0px;
+    padding: 155px 24px 0px;
 }
 
 .about-section {
     display: grid;
     grid-template-columns: 334px auto;
     grid-template-rows: auto auto auto;
-    row-gap: 24px;
+    row-gap: 8px;
+}
+
+.about-logo {
+    justify-items: center;
 }
 
 .about-background-logo {
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
     grid-column: 1;
-    grid-row: 1 / 4;
+    grid-row: 1;
     height: 240px;
     width: 240px;
     background-color: #000;
     border-radius: 50%;
 }
 
-.about-logo {
+.about-logo-img {
     max-width: 148px;
 }
 
@@ -241,14 +253,18 @@
     grid-row: 1;
     padding-bottom:76px;
     padding-top: 101px;
+    padding-left:25px;
     font-weight: bold;
     font-size: 40px;
     text-transform: uppercase;
+    justify-items: start;
 }
 
 .about-section-text {
     display: flex;
     flex-direction: column;
+    justify-items: flex-start;
+    padding-left:25px;
     gap: 24px;
     grid-column: 2;
     grid-row: 2;
@@ -263,11 +279,10 @@
 .footer {
     display:grid;
     grid-template-columns: 254px auto 240px;
-    padding: 180px 50px 0;
+    padding: 170px 51px 0 50px;
     font-weight: normal;
     font-size: 18px;
-    line-height: 24.3px;
-
+    align-items: stert;
 }
 
 .footer-address {
@@ -275,8 +290,8 @@
     flex-direction: column;
     align-items: flex-start;
     justify-items: end;
-    padding-bottom: 82px;
     font-style: normal;
+    line-height: 25px;
 }
 
 .footer-menu {
@@ -284,15 +299,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: 115px;
     list-style: none;
+    line-height: 21px;
+    padding-top: 2px;
+    padding-right: 11px
 }
 
 .footer-link {
     display: flex;
     justify-content: flex-end;
     gap: 48px;
-    padding-bottom: 131px;
     list-style: none;
 }
 
